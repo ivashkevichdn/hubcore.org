@@ -6,10 +6,10 @@
 #
 all: build test
 
-# Запуск Hubcore.
+# Запуск grandcore.org.org.
 run: run_backend
 
-# Запуск Hubcore.
+# Запуск grandcore.org.org.
 stop: stop_backend
 
 # Сборка всего проекта как BackEnd`а, так и FrontEnd`а.
@@ -58,24 +58,23 @@ test_backend:
 
 # Очистка BackEnd`а.
 clean_backend:
-	rm -rf $(PATH_BACKEND)/.pytest_cache
 	find . -type f -name "*.pyc" -delete
 	find . -type d -name "__pycache__" -delete
-	rm -rf $(PATH_BACKEND)/hubcore/frontend/static
-	rm -rf $(PATH_BACKEND)/hubcore/frontend/templates
+	rm -rf $(PATH_BACKEND)/grandcore.org/frontend/static
+	rm -rf $(PATH_BACKEND)/grandcore.org/frontend/templates
 
 
 # Создание новых миграций на основе изменений, которые вы внесли в свои модели на стороне BackEnd`а.
 makemigrations:
-	$(DOCKER_COMPOSE) run --rm hubcore ./manage.py makemigrations
+	$(DOCKER_COMPOSE) run --rm grandcore.org ./manage.py makemigrations
 
 # Применение миграций, а также за отмену подачи и перечисления их статуса на стороне BackEnd`а.
 migrate:
-	$(DOCKER_COMPOSE) run --rm hubcore ./manage.py migrate --no-input
+	$(DOCKER_COMPOSE) run --rm grandcore.org ./manage.py migrate --no-input
 
 # Выполним подготовку/сборку статических файлов.
 collectstatic:
-	$(DOCKER_COMPOSE) run --rm hubcore ./manage.py collectstatic --no-input
+	$(DOCKER_COMPOSE) run --rm grandcore.org ./manage.py collectstatic --no-input
 
 # Запустить очистку Docker контейнеров.
 dockerclean:
@@ -101,9 +100,9 @@ run_frontend:
 # Сборка FrontEnd`а.
 build_frontend:
 	$(NPM) run build
-	mkdir -p $(PATH_BACKEND)/hubcore/frontend/templates/frontend
-	cp -r $(PATH_FRONTEND)/dist/static $(PATH_BACKEND)/hubcore/frontend
-	cp -f $(PATH_FRONTEND)/dist/index.html $(PATH_BACKEND)/hubcore/frontend/templates/frontend/index.html
+	mkdir -p $(PATH_BACKEND)/grandcore.org/frontend/templates/frontend
+	cp -r $(PATH_FRONTEND)/dist/static $(PATH_BACKEND)/grandcore.org/frontend
+	cp -f $(PATH_FRONTEND)/dist/index.html $(PATH_BACKEND)/grandcore.org/frontend/templates/frontend/index.html
 
 
 # Запуск проверки FrontEnd`а.

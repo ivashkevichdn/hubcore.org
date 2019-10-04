@@ -1,13 +1,13 @@
 version: "3"
 
 services:
-  hubcore:
+  grandcore.org:
     restart: always
-    build: ./hubcore
-    command: gunicorn hubcore.wsgi:application -w 2 -b :8000
+    build: ./grandcore.org
+    command: gunicorn grandcore.wsgi:application -w 2 -b :8000
     env_file: config/.env
     volumes:
-      - ./hubcore:/data/hubcore
+      - ./grandcore.org:/var/www/grandcore.org
     depends_on:
       - postgres
       - redis
@@ -20,9 +20,9 @@ services:
       - 80:80
     volumes:
       - ./config/nginx/conf.d:/etc/nginx/conf.d
-      - ./hubcore/static:/data/hubcore/static
+      - ./grandcore.org/static:/var/www/grandcore.org/static
     depends_on:
-      - hubcore
+      - grandcore.org
 
   postgres:
     restart: always

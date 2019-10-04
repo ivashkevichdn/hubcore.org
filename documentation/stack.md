@@ -1,11 +1,11 @@
-# Используемый стек технологий для проекта [HubCore][].
+# Используемый стек технологий для проекта [GrandCore][].
 
 **Стек** _(англ. stack - стопка)_ **технологий** — это набор инструментов, применяющийся при работе в проектах и включающий языки программирования, фрэймворки, системы управления базами данных, компиляторы и т. д.
 От выбранного стека технологий зависят производительность работы, требования к аппаратным ресурсам, надежность работы программного обеспечения (ПО).
 
 ## Бэкенд.
 
-При разработке проекта [HubCore][] в части бэкенда будут применятся следующий стек:
+При разработке проекта [GrandCore][] в части бэкенда будут применятся следующий стек:
 
 - Руководствуемся различными принципами разработки ([KISS][], [DRY][], [SOLID][], [GRASP][] и другие базводры).
 
@@ -29,7 +29,7 @@
 
 - [Certbot][] для автоматического использования сертификатов [Let's Encrypt][].
 
-- Системы контроля версий [GitHub][] для самого проекта [HubCore][].
+- Системы контроля версий [GitHub][] для самого проекта [GrandCore][].
 
 - Системы контроля версий [Git][] для бизнес-процессов.
 
@@ -76,7 +76,7 @@
 
 **Внимание:** на расмотрении с учетом текущего стека.
 
-[hubcore]: https://github.com/hubcoreorg/hubcore.org
+[grandcore]: https://github.com/grandcore/grandcore.org
 [kiss]: https://ru.wikipedia.org/wiki/KISS_(%D0%BF%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF)
 [dry]: https://ru.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself
 [solid]: https://ru.wikipedia.org/wiki/SOLID_(%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BD%D0%BE-%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)
@@ -84,7 +84,7 @@
 [паттернов проектирования]: https://refactoring.guru/ru/design-patterns/python
 [postgresql]: https://www.postgresql.org/docs/
 [django orm]: https://docs.djangoproject.com/en/2.2/topics/db/
-[github]: https://github.com/hubcoreorg/hubcore.org
+[github]: https://github.com/grandcore/grandcore.org
 [git]: https://www.git-scm.com/
 [celery]: http://www.celeryproject.org/
 [docker]: https://www.docker.com/

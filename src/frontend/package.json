@@ -1,7 +1,7 @@
 {
-  "name": "hubcore",
+  "name": "grandcore.org",
   "version": "1.0.0",
-  "description": "Frontend for the Hubcore platform.",
+  "description": "Frontend for the grandcore.org platform.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",

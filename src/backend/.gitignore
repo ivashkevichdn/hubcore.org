@@ -132,8 +132,8 @@ dmypy.json
 # PostgreSQL Backups
 backups/
 
-# Hubcore frontend static files and migrations
-hubcore/frontend/static/
-hubcore/frontend/templates/
-hubcore/static/
+# grandcore.org frontend static files and migrations
+grandcore.org/frontend/static/
+grandcore.org/frontend/templates/
+grandcore.org/static/
 # migrations/

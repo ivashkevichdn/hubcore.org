@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './hubcore/index.js',
+  entry: './grandcore/index.js',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'static/index_mini.js',
@@ -46,9 +46,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './hubcore/index.html',
+      template: './grandcore/index.html',
     }),
-    new CopyWebpackPlugin([{ from: 'hubcore/favicon.ico', to: 'static/favicon.ico' }]),
+    new CopyWebpackPlugin([{ from: 'grandcore/favicon.ico', to: 'static/favicon.ico' }]),
   ],
   devtool: 'source-map',
   devServer: {
